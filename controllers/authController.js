@@ -38,8 +38,7 @@ export const requestAccessToken = (req, res) => {
     url: 'https://accounts.spotify.com/api/token',
     form: {
       code: code,
-      redirect_uri:
-        'https://charlies-spotify-frontend.onrender.com/auth/callback',
+      redirect_uri: 'https://charlies-spotify-frontend.onrender.com/',
       grant_type: 'authorization_code',
     },
     headers: {
