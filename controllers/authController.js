@@ -14,7 +14,8 @@ export const requestUserAuthorization = (req, res) => {
     response_type: 'code',
     client_id: spotifyClientId,
     scope: scope,
-    redirect_uri: 'https://charlies-spotify.herokuapp.com/auth/callback',
+    redirect_uri:
+      'https://charlies-spotify-frontend.onrender.com/auth/callback',
     state: state,
   })
 
@@ -37,7 +38,8 @@ export const requestAccessToken = (req, res) => {
     url: 'https://accounts.spotify.com/api/token',
     form: {
       code: code,
-      redirect_uri: 'https://charlies-spotify.herokuapp.com/auth/callback',
+      redirect_uri:
+        'https://charlies-spotify-frontend.onrender.com/auth/callback',
       grant_type: 'authorization_code',
     },
     headers: {
